@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A package containing the tibetan alphabet.",
   "author": "Christoffer Nawang Aarøy Thondrup <christoffer.thondrup@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "main": "index.js",
   "keywords": [
     "tibetan",
