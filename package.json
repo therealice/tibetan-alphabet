@@ -1,0 +1,23 @@
+{
+  "name": "tibetan-alphabet",
+  "version": "1.0.0",
+  "description": "A package containing the tibetan alphabet.",
+  "author": "Christoffer Nawang Aarøy Thondrup <christoffer.thondrup@gmail.com>",
+  "license": "ISC",
+  "main": "index.js",
+  "keywords": [
+    "tibetan",
+    "alphabet"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/therealice/tibetan-alphabet.git"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
