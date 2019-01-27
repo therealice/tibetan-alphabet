@@ -11,19 +11,50 @@ npm i tibetan-alphabet --save
 ```
 
 ### How to use
+Examples:
 ```
-var alphabet = require('tibetan-alphabet').alphabet();
+import { entries, entry, row, col } from 'tibetan-alphabet';
 
-// Get text by row and column
-var result1 = alphabet.filter(char => char.row === 1 && char.col === 1);
-console.log(result1[0].text); // displays ཀ
+// All entries contains 30 entries. Display the first tibetan character
+const entries = entries();
+console.log(entries[0].text); // displays ཀ
 
-// Get row and column by text
-var result2 = alphabet.filter(char => char.text === 'ཀ');
-console.log(result2[0].row); // displays 1
-console.log(result2[0].col); // displays 1
+// Entry at row 1 column 1. Display the tibetan character
+const entry = entry(1, 1);
+console.log(entry.text); // displays ཀ
+
+// First row, contains 4 entries. Display the first tibetan character
+const firstRow = row(1);
+console.log(firstRow[0].text); // displays ཀ
+
+// Multiple rows. Display the first tibetan character
+const rows = row([1, 2, 8]);
+console.log(rows[0][0].text); // displays ཀ
+
+// First column, contains 8 entries. Display the first tibetan character
+const firstColumn = col(1);
+console.log(firstColumn[0].text); // displays ཀ
+
+// Multiple columns. Display the first tibetan character
+const columns = col([1, 2, 4]);
+console.log(columns[0][0].text); // displays ཀ
+```
+
+Functions:
+* entries() : [entry]
+* entry(int: row, int: col) : entry
+* row(int: row | [int]: rows) : [entry]
+* col(int: col | [int]: cols) : [entry]
+
+An entry contains:
+```
+{
+  row: <integer>,
+  col: <integer>,
+  text: <string>
+}
 ```
 
 ## Authors
 
-* **Christoffer Nawang Aarøy Thondrup** - *Initial work* - [ChristofferThondrup](https://github.com/awakephoenix)
+* **Christoffer Nawang Aarøy Thondrup** - [ChristofferThondrup](https://github.com/awakephoenix)
